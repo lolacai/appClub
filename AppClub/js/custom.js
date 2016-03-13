@@ -2,6 +2,7 @@ jQuery(document).ready(function() {
   
 
    $('#carouselHacked').carousel();
+
   
 	//this code is for the gmap
 	 var map = new GMaps({
@@ -37,6 +38,8 @@ jQuery(document).ready(function() {
               });
           });
 
+
+
           function onScroll(event){
               var scrollPos = $(document).scrollTop();
               $('.navbar-default .navbar-nav>li>a').each(function () {
@@ -69,8 +72,6 @@ jQuery(document).ready(function() {
           
         }
      });
-
-      
      
 
 });

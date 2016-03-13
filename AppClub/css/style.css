@@ -14,6 +14,14 @@ h1, h2{
 	font-weight: bold;
 }
 
+.carousel-inner .active.left  { left: -33%;             }
+.carousel-inner .active.right { left: 33%;              }
+.carousel-inner .next         { left: 33%               }
+.carousel-inner .prev         { left: -33%              }
+.carousel-control.left        { background-image: none; }
+.carousel-control.right       { background-image: none; }
+.carousel-inner .item         { background: white;      }
+
 
 /*header area*/
 .top-header{
@@ -129,12 +137,12 @@ li a.active{
 .carousel-control{
 	width: 5%;
 }
-.carousel-inner{
+/*.carousel-inner{
 	background: -webkit-linear-gradient(left, #000 , blue); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(left, #000, blue); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(left, #000, blue); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(to left, #000 , blue); /* Standard syntax */
-}
+	/*background: -o-linear-gradient(left, #000, blue);  For Opera 11.1 to 12.0 */
+	/*background: -moz-linear-gradient(left, #000, blue);  For Firefox 3.6 to 15 */
+	/*background: linear-gradient(to left, #000 , blue); /* Standard syntax */
+/*}*/
 .item{
 	position: relative;
 }
@@ -604,7 +612,7 @@ responsive area
 	  padding: 14px 12px;
 	}
 	.carousel-caption h1 {
-  		font-size: 120px;
+  		font-size: 60px;
   	}
   	.carousel-caption p {
   		font-size: 32px;
@@ -636,10 +644,10 @@ responsive area
 	  padding: 10px 8px;
 	}
 	.carousel-caption h1 {
-  		font-size: 90px;
+  		font-size: 50px;
   	}
   	.carousel-caption p {
-  		font-size: 30px;
+  		font-size: 20px;
   	}
   	.carousel-caption button {
 		 width: 180px;
@@ -678,10 +686,10 @@ responsive area
 	    margin-top: -110px;
 	}
 	.carousel-caption h1 {
-  		font-size: 75px;
+  		font-size: 30px;
   	}
   	.carousel-caption p {
-  		font-size: 25px;
+  		font-size: 18px;
   	}
   	.carousel-caption button {
 	  width: 160px;
@@ -736,7 +744,7 @@ responsive area
 	    margin-top: -60px;
 	}
 	.carousel-caption h1 {
-  		  font-size: 20px;
+  		  font-size: 15px;
   	}
   	.carousel-caption p {
   		font-size: 12px;
