@@ -23,6 +23,25 @@ h1, h2{
 .carousel-inner .item         { background: white;      }
 
 
+.toolbar-item,.toolbar-layer{background:url(../img/toolbar.png) no-repeat;}
+.toolbar{z-index: 999; position:fixed;right:0px;bottom:50px;}/*假设网页宽度为1200px，导航条在右侧悬浮*/
+.toolbar-item{display:block;width:52px;height:52px;margin-top:1px;position:relative;-moz-transition:background-position 1s;-ms-transition:background-position 1s;-o-moz-transition:background-position 1s;-webkit-moz-transition:background-position 1s;transition:background-position 1s;}
+.toolbar-item:hover .toolbar-layer{opacity:1;filter:alpha(opacity=100);transform:scale(1);-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);-o-transform:scale(1);}
+.toolbar-item-weixin{background-position:0 -798px;}
+.toolbar-item-weixin:hover{background-position:0 -860px;}
+.toolbar-item-weixin .toolbar-layer{height:212px;background-position:0 0;}
+.toolbar-item-feedback{display:none;background-position:0 -426px;}
+.toolbar-item-feedback:hover{display:none;background-position:0 -488px;}
+.toolbar-item-app{background-position:0 -550px;}
+.toolbar-item-app:hover{background-position:0 -612px;}
+.toolbar-item-app .toolbar-layer{height:194px;background-position:0 -222px;}
+.toolbar-item-top{background-position:0 -674px;}
+.toolbar-item-top:hover{background-position:0 -736px;}
+.toolbar-layer{position:absolute;right:46px;bottom:-10px;width:172px;opacity:0;filter:alpha(opacity=0);
+transform-origin: 95% 95%;-moz-transform-origin: 95% 95%;-ms-transform-origin: 95% 95%;-o-transform-origin: 95% 95%;-webkit-transform-origin: 95% 95%;transform:scale(0.01);
+-moz-transform:scale(0.01);-ms-transform:scale(0.01);-o-transform:scale(0.01);-webkit-transform:scale(0.01);transition:all 1s;-moz-transition:all 1s;-ms-transition:all 1s;-o-transition:all 1s;-webkit-transition:all 1s;}
+
+
 /*header area*/
 .top-header{
 	background: #fff !important;
@@ -37,6 +56,7 @@ h1, h2{
 	margin:auto;
 }
 .top-header img.logo{
+	width: 180px;
 	margin-bottom: 15px;
 	margin-top: 0;
 	transition:all .5s ease 0s;
@@ -85,7 +105,7 @@ ul.nav{
   background-color: #000;
 }
 li a.active{
-	color: #42b3e5 !important;
+	color: #C42C29 !important;
 }
 .navbar-default .navbar-toggle {
   border-color: #fff;
@@ -120,7 +140,7 @@ li a.active{
 .carousel-caption button{
 	width: 240px;
 	height: 60px;
-	background: #3a9ecb;
+	background: rgba(196, 44, 41, 0.52);
 	color: #fff;
 	font-size: 30px;
 	text-transform: uppercase;
@@ -176,7 +196,7 @@ li a.active{
 /*about area*/
 .about h2{
 	font-size: 90px;
-	color: #42b3e5;
+	color: #C42C29;
 	margin-top: 50px;
 }
 .about h4{
@@ -189,6 +209,7 @@ li a.active{
 }
 .single-about-detail{
 	position: relative;
+	margin-bottom: 5px;
 }
 .pentagon-text h1{
 	font-size: 60px;
@@ -246,7 +267,7 @@ li a.active{
 }
 .about-details h3{
 	font-size: 36px;
-	color: #fff;
+	color: #a94442;
 	margin-top: 0;
 }
 .about-details p{
@@ -266,14 +287,14 @@ li a.active{
 
 /*service area*/
 .service{
-	background: url(../img/pattern.jpg);
-	background-repeat: repeat-y;
+	margin-bottom: 40px;
+    background: #080808;
 	margin-top: 40px;
 }
 .service h2{
 	font-size: 90px;
-	color: #fff;
-	margin-top: 70px;
+	color: #C42C29;
+	margin-top: 30px;
 	margin-bottom: 0;
 }
 .service h4{
@@ -295,7 +316,7 @@ li a.active{
 .service-img {
   width: 205px;
   height: 125px;
-  background: #3a9ecb;
+  background: rgba(196, 44, 41, 0.52);
   position: relative;
 }
 .single-service h3{
@@ -315,7 +336,7 @@ li a.active{
 }
 .team h2{
 	font-size: 90px;
-	color: #42b3e5;
+	color: #C42C29;
 	margin-top: 50px;
 	margin-bottom: 0;
 }
@@ -400,10 +421,10 @@ li a.active{
 
 /*contact section*/
 .contact-caption{
-	background: #3a9dca;
+	background: #333;
 }
 .contact-heading h2{
-	color: #fff;
+	color: #C42C29;
 	font-size: 90px;
 }
 .contact-info{
@@ -412,20 +433,20 @@ li a.active{
 .contact-info h3{
 	padding-left: 0;
 	font-size: 30px;
-	color: #fff;
+	color: #C42C29;
 	text-transform: uppercase;
 	font-weight: bold;
-	border-bottom: 1px solid #13849c;
+	border-bottom: 1px solid #rgba(196, 44, 41, 0.52);
 	padding-bottom: 12px;
 	margin-bottom: 0;
 }
 .contact-form h3{
 	padding-left: 0;
 	font-size: 30px;
-	color: #fff;
+	color: #C42C29;
 	text-transform: uppercase;
 	font-weight: bold;
-	border-bottom: 1px solid #13849c;
+	border-bottom: 1px solid #rgba(196, 44, 41, 0.52);
 	padding-bottom: 12px;
 	margin-bottom: 0;
 }
@@ -436,7 +457,7 @@ li a.active{
 .contact-info ul li{
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
-	color: #fff;
+	color: #C42C29;
 }
 .contact-info i.fa{
 	font-size: 16px;
@@ -450,7 +471,7 @@ li a.active{
 .contact-form input{
 	width: 100%;
 	height: 40px;
-	background: #fff;
+	background: rgba(224, 91, 91, 0.28);
 	font-size: 13px;
 	color: #084a5c;
 	font-family: 'Open Sans', sans-serif;
@@ -459,6 +480,7 @@ li a.active{
 	margin-bottom: 12px;
 }
 .contact-form textarea{
+	background: rgba(224, 91, 91, 0.28);
 	font-family: 'Open Sans', sans-serif;
 	padding:12px;
 	width: 100%;
@@ -467,11 +489,11 @@ li a.active{
 	margin-bottom: 12px;
 }
 .info-detail{
-	border-top: 1px solid #53cde5;
+	border-top: 1px solid #rgba(196, 44, 41, 0.52);
 	padding-top: 15px;
 }
 .form{
-	border-top: 1px solid #53cde5;
+	border-top: 1px solid #rgba(196, 44, 41, 0.52);
 	padding-top: 15px;
 	text-align: right;
 }
@@ -480,7 +502,7 @@ li a.active{
 	height: 50px;
 	float: right;
 	font-size: 24px;
-	color: #fff;
+	color: #C42C29;
 	background: url(../img/btn-bg.jpg);
 	background-repeat: no-repeat;
 	padding: 0;
@@ -533,7 +555,7 @@ li a.active{
 	padding: 22px 10px;
 }
 .footer a i.fa:hover{
-	color: #42b3e5;
+	color: #C42C29;
 }
 
 .carousel-inner{
@@ -652,7 +674,7 @@ responsive area
   	.carousel-caption button {
 		 width: 180px;
 		 height: 50px;
-		 background: #3a9ecb;
+		 background: rgba(196, 44, 41, 0.52);
 		 color: #fff;
 		 font-size: 22px;
 	}
@@ -762,7 +784,7 @@ responsive area
 	}
 	.about h2 {
 	  font-size: 50px;
-	  color: #42b3e5;
+	  color: #C42C29;
 	  margin-top: 30px;
 	}
 	.service h2 {
