@@ -55,6 +55,7 @@ transform-origin: 95% 95%;-moz-transform-origin: 95% 95%;-ms-transform-origin: 9
 	background: transparent;
 	margin:auto;
 }
+
 .top-header img.logo{
 	width: 180px;
 	margin-bottom: 15px;
@@ -66,6 +67,7 @@ transform-origin: 95% 95%;-moz-transform-origin: 95% 95%;-ms-transform-origin: 9
   -ms-transition:all .5s ease 0s;
 }
 .navbar-default {
+	display: inline;
   background-color: transparent;
   border-color: transparent;
   margin-bottom: 0;
@@ -75,6 +77,11 @@ transform-origin: 95% 95%;-moz-transform-origin: 95% 95%;-ms-transform-origin: 9
   -moz-transition:all .5s ease 0s;
   -o-transition:all .5s ease 0s;
   -ms-transition:all .5s ease 0s;
+}
+.langLogo {
+	position: fixed;
+    top: 42px;
+    right: 15px;
 }
 .nav-bar{
 	margin-top: 27px;
@@ -125,13 +132,13 @@ li a.active{
 	background: #000 !important;
 }
 .carousel-caption h1{
-	font-size: 157px;
+	font-size: 60px;
 	color: #fff;
 	text-transform: uppercase;
 	margin-bottom: 0;
 }
 .carousel-caption p{
-	font-size: 40px;
+	font-size: 32px;
 	color: #fff;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -278,7 +285,7 @@ li a.active{
 	padding-bottom: 30px;
 }
 .single-about-detail:hover .about-details{
-	background: #3a9dca;
+	background: rgba(70, 13, 13, 0.85);
 }
 .single-about-detail:hover .pentagon-text h1{
 	color: #3a9dca;
@@ -333,6 +340,7 @@ li a.active{
 /*team section*/
 .team{
 	padding-bottom: 60px;
+	background: #2A2A2A;
 }
 .team h2{
 	font-size: 90px;
@@ -352,10 +360,18 @@ li a.active{
 }
 .person img{
 	width: 100%;
+		    min-height: 150px;
+    min-width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
 }
 .person-detail{
+	border: 1px solid #2A2A2A;
 	padding:10px;
-	background: #3a9cc8;
+	background: #643E3E;
 	position: relative;
 	transition: all .7s ease 0s;
 	-webkit-transition: all .7s ease 0s;
@@ -367,7 +383,7 @@ li a.active{
 	position: absolute;
 	width: 20px;
 	height: 20px;
-	background: #3ba0cc;
+	background: #643E3E;
 	transform:rotate(45deg);
 	-webkit-transform:rotate(45deg);
 	-moz-transform:rotate(45deg);
@@ -385,7 +401,7 @@ li a.active{
 	position: absolute;
 	width: 20px;
 	height: 20px;
-	background: #3ba0cc;
+	background: #643E3E;
 	transform:rotate(45deg);
 	-webkit-transform:rotate(45deg);
 	-moz-transform:rotate(45deg);
@@ -409,13 +425,13 @@ li a.active{
 	font-family: 'Open Sans', sans-serif;
 }
 .single-member:hover .person-detail{
-	background: #2a2a2a;
+	background: #643E3E;
 }
 .single-member:hover .arrow-top{
-	background: #2a2a2a;
+	background: #643E3E;
 }
 .single-member:hover .arrow-bottom{
-	background: #2a2a2a;
+	background: #643E3E;
 }
 
 
@@ -629,6 +645,9 @@ responsive area
 
 /* md */
 @media (min-width: 992px) and (max-width: 1199px) {
+	.person img{
+		width:50%;
+	}
 	.navbar-default .navbar-nav>li>a {
 	  font-size: 20px;
 	  padding: 14px 12px;
@@ -661,6 +680,14 @@ responsive area
 
 /* sm */
 @media (min-width: 768px) and (max-width: 991px) {
+	.langLogo {
+	position: fixed;
+       top: 38px;
+    right: 18px;
+}
+	.person img{
+		width:50%;
+	}
 	.navbar-default .navbar-nav>li>a {
 	  font-size: 16px;
 	  padding: 10px 8px;
@@ -698,6 +725,24 @@ responsive area
 
 /* xs */
 @media (min-width: 480px) and (max-width: 767px) {
+		.langLogo {
+	position: fixed;
+        top: 42px;
+    right: 78px;
+}
+	.person img{
+		width:50%;
+	}
+	.about-img img{
+		max-width: 50%;
+	    min-height: 150px;
+    min-width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+	}
 	.header-logo img{
 	  margin-top: 20px;
 	}
@@ -744,11 +789,30 @@ responsive area
 
 /* XS Portrait */
 @media (max-width: 479px) {
+	.person img{
+		width:50%;
+	}
+	.langLogo {
+    position: fixed;
+    top: 34px;
+    right: 8px;
+}
+	.about-img img{
+		max-width: 50%;
+	    min-height: 150px;
+    min-width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+	}
 	.top-header img.logo {
-	  margin: 20px 10px;
+	  /*margin: 20px 10px;*/
+	      margin-top: -30px;
 	}
 	.header-logo{
-		margin-top: 20px !important;
+		/*margin-top: 20px !important;*/
 	}
 	.navbar-default .navbar-toggle {
 		 border-color: #fff;
